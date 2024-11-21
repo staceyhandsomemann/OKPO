@@ -1,0 +1,247 @@
+body {
+    background-color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 89%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: bisque;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.header {
+    background-color: #c00;
+    color: #fff;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.OKPO {
+    justify-content: space-between;
+    margin-left: 5%;
+}
+
+/*for the drop down menu*/
+
+.menuul {
+    list-style-type: none;  /*para mawala yung bullet*/
+    margin-left: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(141, 0, 0);
+}
+
+.menuli {
+    float: left;
+}
+
+.menuli a {
+    display: block;
+    color: rgb(255, 255, 185);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menuli a:hover {
+    background-color:rgb(255, 255, 185);
+    color:rgb(141, 0, 0)
+}
+
+.menuh1 {
+    background-color: rgb(255, 255, 185);
+    text-align: center
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(255, 255, 185);
+    color: rgb(141, 0, 0)
+}
+
+/*end of drop down menu*/
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+nav a:hover {
+    background-color: #900;
+}
+
+
+.time-date {
+    display: block;
+    color: rgb(255, 255, 185);
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ffc107;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #e0a800;
+}
+
+.login-form {
+    margin-top: 20px;
+}
+
+.login-form input {
+    width: 250px;
+    max-width: 250px;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(141, 0, 0);
+    color: rgb(255, 255, 185);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 346px;
+    max-width: 346px;
+    margin-top: 10px;
+    font-size: large;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 185);
+    color: rgb(141, 0, 0);
+    font-size: large;
+}
+
+.hidden {
+    display: none;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 8%;
+    margin: 8%;
+    cursor: pointer;
+    margin-right: auto;
+    align-items: center;
+}
+
+.logo:hover {
+    opacity: 0.9;
+}
+
+/* for the profile thing */
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .profile-picture {
+    width: 150px; /* Set width for the profile picture */
+    height: 150px; /* Set height for the profile picture */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 20px; /* Space between image and text */
+    overflow: hidden; /* Ensure the image fits within the circle */
+    display: flex; /* Center the image */
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image */
+    background-color: #e0e0e0; /* Placeholder background color */
+  }
+  .profile-picture img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Make the image fill the container */
+    object-fit: cover; /* Resize the image to cover the container */
+  }
+  .profile-details {
+    font-family: Arial, sans-serif;
+  }
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: row;
+        align-items: flex-start;
+        
+    }
+
+    nav ul {
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+
+    .time-date {
+        position: static;
+    }
+
+    .login-form input {
+        max-width: 97%;
+        width: 97%;
+    }
+
+    .login-form button {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Media Query for very small screens */
+@media (max-width: 480px) {
+    .logo {
+        width: 60px;
+        height: 60px;
+        justify-content: space-between;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .time-date {
+        font-size: 12px;
+        padding: 3px;
+    }
+}

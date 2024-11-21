@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OKPO</title>
+  <script src="research.js"></script>
+  <link rel="stylesheet" href="researchpolicies.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="homepage.html"> <img  src="imagesz/cielito.jpg" alt="School Logo" class="logo"></a>
+      </a>
+      <div class="OKPO">
+        <h1>ONLINE KASUNDUAN PORTAL</h1>
+      </div>
+    </div>
+    <ul class="menuul">
+      <li class="menuli"><a href="research.html">Profile</a></li>
+      <li class="menuli"><a href="researchstatus.html">Status</a></li>
+      <li class="menuli"><a href="researchpolicies.html">Policies</a></li>
+      <div class="time-date" id="clock"></div>
+    </ul>
+    <div class="content" id="login-form">
+      <h1 class="h1table">Violations History</h1>
+      <div class="seatingdiv">
+        <br>
+        <table id="board">
+          <tr>
+            <th colspan="1" class="head">Violations</th>
+            <th colspan="1" class="head">Verified by</th>
+          </tr>
+          <tr id="no-violations-row">
+            <td colspan="2" class="NOVIOLATIONS"><strong>You have no violations.</strong></td>
+          </tr>
+        </table>
+      </div>
+      <div class="admin-section">
+        <h2>Edit Violations</h2>
+        <input type="text" id="violation-input" placeholder="Enter violation">
+        <input type="text" id="verified-by-input" placeholder="Verified by">
+        <button onclick="addViolation()">Add Violation</button>
+      </div>
+    </div>
+    <div class="content hidden" id="main-content">
+      <p>Check your status</p>
+      <a href="#" class="button">Check your status</a>
+    </div>
+  </div>
+
+  <script>
+    function addViolation() {
+      const violationInput = document.getElementById('violation-input').value;
+      const verifiedByInput = document.getElementById('verified-by-input').value;
+
+      if (violationInput && verifiedByInput) {
+        const table = document.getElementById('board');
+        const noViolationsRow = document.getElementById('no-violations-row');
+
+        // Remove "You have no violations" row if it exists
+        if (noViolationsRow) {
+          table.deleteRow(noViolationsRow.rowIndex);
+        }
+
+        // Insert new violation row
+        const newRow = table.insertRow(-1); // Insert at the end of the table
+        const violationCell = newRow.insertCell(0);
+        const verifiedByCell = newRow.insertCell(1);
+
+        violationCell.textContent = violationInput;
+        verifiedByCell.textContent = verifiedByInput;
+
+        // Clear input fields
+        document.getElementById('violation-input').value = '';
+        document.getElementById('verified-by-input').value = '';
+      } else {
+        alert('Please fill in both fields.');
+      }
+    }
+  </script>
+</body>
+</html>

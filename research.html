@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OKPO - Profile</title>
+  <script src="OKPOJS.js"></script>
+  <link rel="stylesheet" href="research.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="homepage.html"> <img src="imagesz/cielito.jpg" alt="School Logo" class="logo"></a>
+      <div class="OKPO">
+        <h1>ONLINE KASUNDUAN PORTAL</h1>
+      </div>
+    </div>
+    <ul class="menuul">
+      <li class="menuli"><a href="research.html">Profile</a></li>
+      <li class="menuli"><a href="researchstatus.html">Status</a></li>
+      <li class="menuli"><a href="researchpolicies.html">Policies</a></li>
+      <div class="time-date" id="clock"></div>
+    </ul>
+    <div class="content" id="login-form">
+      <div class="profile-container">
+        <div class="profile-picture">
+          <img src="imagesz/Screenshot 2024-04-03 121615.png" alt="Profile Picture"> <!-- Replace with your image path -->
+        </div>
+        <div class="profile-details">
+          <p><strong>Name:</strong> Stacey Handsomemann</p>
+          <p><strong>Email:</strong> stacey.handsomemann@whouseshotmail.com</p>
+          <p><strong>Role:</strong> Student</p>
+          <p><strong>Grade Level:</strong> 12</p>
+          <p><strong>Strand and Section:</strong> ICT - Programming</p>
+        </div>
+      </div>
+      <!-- Log Out Button -->
+      <button class="logout-button" onclick="confirmLogout()">Log Out</button>
+    </div>
+    <div class="content hidden" id="main-content">
+      <p>Check your status</p>
+      <a href="#" class="button">Check your status</a>
+    </div>
+  </div>
+</body>
+</html>

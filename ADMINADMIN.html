@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin and User Profiles</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    #userProfile, #adminSection {
+      margin: 20px 0;
+    }
+    #userModal {
+      display: none;
+      position: fixed;
+      top: 30%;
+      left: 30%;
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Admin and User Management</h1>
+
+  <div id="adminSection">
+    <h2>Admin Section</h2>
+    <table id="adminTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Admin rows will be dynamically added here -->
+      </tbody>
+    </table>
+    <button id="addUserBtn" onclick="renderUsers()">Add User</button>
+  </div>
+
+  <div id="userProfile">
+    <h2>User Profile Section</h2>
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- User rows will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal for Editing/Adding User -->
+  <div id="userModal">
+    <h2>Add/Edit User</h2>
+    <label for="userName">Name:</label>
+    <input type="text" id="userName"><br><br>
+    <label for="userEmail">Email:</label>
+    <input type="text" id="userEmail"><br><br>
+    <label for="userRole">Role:</label>
+    <input type="text" id="userRole"><br><br>
+    <button id="saveUserBtn">Save</button>
+    <button id="closeModalBtn">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
